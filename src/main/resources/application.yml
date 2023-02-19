@@ -1,0 +1,23 @@
+elasticsearch:
+    credentials:
+        password: ${ELASTICSEARCH_PWD:isg65t2w7q}
+        user: ${ELASTICSEARCH_USER:shv91lmrp4}
+    host: ${ELASTICSEARCH_HOST:unirsearch-5848749289.us-east-1.bonsaisearch.net}
+eureka:
+    client:
+        service-url:
+            defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+    instance:
+      leaseRenewalIntervalInSeconds: 10
+      metqstanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}:${random.value}}
+      
+logging:
+    level:
+        tracer: TRACE
+server:
+    port: 8888
+spring:
+    application:
+        name: ms-products
+    jpa:
+        show-sql: true
