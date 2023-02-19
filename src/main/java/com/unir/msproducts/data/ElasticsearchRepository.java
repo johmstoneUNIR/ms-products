@@ -20,7 +20,7 @@ import com.unir.msproducts.model.pojo.ElasticProduct;
 @RequiredArgsConstructor
 public class ElasticsearchRepository {
 
-    private final String[] nameSearchFields = { "name.search", "name.search._2gram", "name.search._3gram" };
+    private final String[] nameSearchFields = { "name", "name._2gram", "name._3gram" };
 
     private final ElasticProductRepository productRepository;
     private final ElasticsearchOperations elasticClient;
